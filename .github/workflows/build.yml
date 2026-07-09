@@ -22,7 +22,7 @@ jobs:
 
     - name: Build EXE with Nuitka
       run: |
-        python -m nuitka --standalone --onefile --plugin-enable=tk-inter --windows-disable-console app.py
+        python -m nuitka --standalone --onefile --plugin-enable=tk-inter --windows-console-mode=disable --assume-yes-for-downloads app.py
 
     - name: Upload Executable
       uses: actions/upload-artifact@v4
